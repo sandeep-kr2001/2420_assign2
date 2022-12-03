@@ -77,7 +77,7 @@ const fastify = require('fastify')({ logger: true })
 
 // Declare a route
 fastify.get('/api', async (request, reply) => {
-  return { hello: 'Server x' }
+  return { hello: 'Server 1' }
 })
 
 // Run the server!
