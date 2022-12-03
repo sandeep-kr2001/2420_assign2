@@ -166,6 +166,7 @@ systemctl status hello_web.service
 ![caddy_server2](https://user-images.githubusercontent.com/97915467/205424686-8f261280-e98d-467f-9508-83f02c9f711d.JPG)
 
  visit http://24.199.71.46/api
- ![server1_api](https://user-images.githubusercontent.com/97915467/205424733-d8e83f39-409b-4411-8b7d-4e5ce2c80cb5.JPG)
+ 
+![server1_api](https://user-images.githubusercontent.com/97915467/205424733-d8e83f39-409b-4411-8b7d-4e5ce2c80cb5.JPG)
 ![server2_api](https://user-images.githubusercontent.com/97915467/205424735-6d290090-8836-4ace-8f11-f40e042ed849.JPG)
 
