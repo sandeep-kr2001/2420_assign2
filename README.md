@@ -115,7 +115,7 @@ http:// {
 
 ```
 
-
+* move this file from your local machine to the both of the droplets inside /etc/caddy
 
 ## Step Six - Installing Node and Npm with Volta
 
