@@ -24,11 +24,13 @@ Create a VPC, Two droplets(Server1 and server2), Load balancer and firewall: <a 
 
 Switch the user to the new user using  ``` su <username> ```
 
+![create_user](https://user-images.githubusercontent.com/97915467/205424765-4ee12d4b-3796-4551-887d-77eca805f729.JPG)
+
 Add the public ssh key from the root user to new user:
 * Inside new user home directory ```mkdir .ssh```
 * Switch to your root user and copy the authorized_keys file to the new users .ssh with
 ``` cp ~/.ssh/authorized_keys /home/<username>/.ssh/ ```
-![create_user](https://user-images.githubusercontent.com/97915467/205424765-4ee12d4b-3796-4551-887d-77eca805f729.JPG)
+
 
 
 ## Step-Three: Install Caddy
@@ -74,14 +76,14 @@ Follow these commands step by step. Run these in your src directory:
 const fastify = require('fastify')({ logger: true })
 
 // Declare a route
-fastify.get('/', async (request, reply) => {
+fastify.get('/api', async (request, reply) => {
   return { hello: 'Server x' }
 })
 
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 })
+    await fastify.listen({ port: 5050 })
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
