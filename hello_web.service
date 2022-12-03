@@ -1,0 +1,15 @@
+[Unit]
+Description=run node app on localhost:5050
+After=network.target
+
+[Service]
+Type=simple
+User=server
+Group=server
+ExecStart=/home/server/.volta/bin/node /var/www/src/index.js
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=hello_web
+
+[Install]
+WantedBy=multi-user.target
