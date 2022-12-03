@@ -99,6 +99,10 @@ sftp -i ~/.ssh/{key_file_name} {user}@{droplet_ip}
 put -r src
 put -r html
 ```
+
+* Copy the src and html file and move them to /var/www/ using 
+``` cp -r html /var/www/  ```
+
 ## Step Five - Caddyfile
 
 On your local machine, you will write a Caddyfile, which will be your configuration file for caddy
