@@ -8,6 +8,9 @@ Create proxy server in Caddy
 
 ## Step-One: Create VPC, droplets, Load balancer and firewall
 Create a VPC, Two droplets(Server1 and server2), Load balancer and firewall: <a href="https://vimeo.com/775412708/4a219b37e7" target="_blank">refer the video</a>
+![dashboard_digitalocean](https://user-images.githubusercontent.com/97915467/205424750-67d9911d-164b-49cf-a97b-3bcf4d726fa2.JPG)
+![firewall](https://user-images.githubusercontent.com/97915467/205424751-1ff1937e-2403-4326-98d2-985b8ed9e244.JPG)
+![vpc](https://user-images.githubusercontent.com/97915467/205424753-30916a88-7efb-4c1e-b656-d2ebe53bb677.JPG)
 
 
 
@@ -25,6 +28,7 @@ Add the public ssh key from the root user to new user:
 * Inside new user home directory ```mkdir .ssh```
 * Switch to your root user and copy the authorized_keys file to the new users .ssh with
 ``` cp ~/.ssh/authorized_keys /home/<username>/.ssh/ ```
+![create_user](https://user-images.githubusercontent.com/97915467/205424765-4ee12d4b-3796-4551-887d-77eca805f729.JPG)
 
 
 ## Step-Three: Install Caddy
@@ -116,6 +120,10 @@ To do so follow the commands:
 ```  volta install node ```
 ``` npm install fastify ```
 
+![npm_init](https://user-images.githubusercontent.com/97915467/205424779-acf5392b-e40d-44a4-9679-b92584612e89.JPG)
+![volta](https://user-images.githubusercontent.com/97915467/205424780-c76eefc6-8843-4701-9616-9fb374bb3811.JPG)
+![node_install](https://user-images.githubusercontent.com/97915467/205424781-588986e7-7b68-4729-8f3b-710d91454ab8.JPG)
+
 ## Step Seven - Node App Service File
  write a service file on your local machine to start your node application
  * On your local machine create file called hello_web.service and add the following content:
@@ -154,4 +162,10 @@ systemctl status hello_web.service
  
  To test Your Load Balancer follow the steps below:
  visit http://24.199.71.46/
- 
+ ![caddy_server1](https://user-images.githubusercontent.com/97915467/205424684-a65c345b-05f9-45c6-9393-1ceaa7b6d6f4.JPG)
+![caddy_server2](https://user-images.githubusercontent.com/97915467/205424686-8f261280-e98d-467f-9508-83f02c9f711d.JPG)
+
+ visit http://24.199.71.46/api
+ ![server1_api](https://user-images.githubusercontent.com/97915467/205424733-d8e83f39-409b-4411-8b7d-4e5ce2c80cb5.JPG)
+![server2_api](https://user-images.githubusercontent.com/97915467/205424735-6d290090-8836-4ace-8f11-f40e042ed849.JPG)
+
